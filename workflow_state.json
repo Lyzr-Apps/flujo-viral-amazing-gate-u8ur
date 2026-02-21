@@ -1,0 +1,28 @@
+{
+  "agents": {
+    "trend_research_agent": {
+      "agent_id": "699971cf3f15947a386b5c1b",
+      "name": "Trend Research Agent"
+    },
+    "style_analysis_agent": {
+      "agent_id": "699971d066df46343521bf74",
+      "name": "Style Analysis Agent"
+    },
+    "structure_generator_agent": {
+      "agent_id": "699971d066df46343521bf76",
+      "name": "Structure Generator Agent"
+    },
+    "viral_trend_manager": {
+      "agent_id": "699971ebc9d9dd3effcccab1",
+      "name": "Viral Trend Manager"
+    },
+    "thumbnail_image_agent": {
+      "agent_id": "6999720af4d61186679a93ef",
+      "name": "Thumbnail & Image Agent"
+    },
+    "script_video_agent": {
+      "agent_id": "6999720af4d61186679a93f1",
+      "name": "Script & Video Agent"
+    }
+  }
+}

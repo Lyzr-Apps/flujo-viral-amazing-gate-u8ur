@@ -1,0 +1,22 @@
+{
+  "agent_name": "Trend Research Agent",
+  "agent_id": "699971cf3f15947a386b5c1b",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "viral_videos": [
+      {
+        "title": "string",
+        "channel": "string",
+        "views": "string",
+        "category": "string",
+        "topic": "string",
+        "virality_reason": "string",
+        "engagement_notes": "string"
+      }
+    ],
+    "summary": "string",
+    "week_overview": "string"
+  }
+}

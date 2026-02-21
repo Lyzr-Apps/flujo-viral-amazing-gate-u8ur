@@ -1,0 +1,66 @@
+{
+  "agent_name": "Script & Video Agent",
+  "agent_id": "6999720af4d61186679a93f1",
+  "description": "Writes hybrid scripts that blend multiple viral styles into original content, and produces a complete video production plan including shot list, timing, and delivery notes",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "scripts": [
+      {
+        "title": "string",
+        "viral_potential": "string",
+        "viral_styles_blended": "string",
+        "target_duration": "string",
+        "hook": "string",
+        "script_body": [
+          {
+            "timestamp": "string",
+            "section": "string",
+            "content": "string",
+            "delivery_notes": "string"
+          }
+        ],
+        "cta": "string",
+        "outro": "string",
+        "production_plan": {
+          "shot_list": "string",
+          "equipment": "string",
+          "editing_style": "string",
+          "music_suggestions": "string",
+          "thumbnail_concept": "string"
+        }
+      }
+    ],
+    "overall_strategy": "string"
+  },
+  "example_response": {
+    "scripts": [
+      {
+        "title": "sample string",
+        "viral_potential": "sample string",
+        "viral_styles_blended": "sample string",
+        "target_duration": "sample string",
+        "hook": "sample string",
+        "script_body": [
+          {
+            "timestamp": "sample string",
+            "section": "sample string",
+            "content": "sample string",
+            "delivery_notes": "sample string"
+          }
+        ],
+        "cta": "sample string",
+        "outro": "sample string",
+        "production_plan": {
+          "shot_list": "sample string",
+          "equipment": "sample string",
+          "editing_style": "sample string",
+          "music_suggestions": "sample string",
+          "thumbnail_concept": "sample string"
+        }
+      }
+    ],
+    "overall_strategy": "sample string"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "agent_name": "Thumbnail & Image Agent",
+  "agent_id": "6999720af4d61186679a93ef",
+  "description": "Generates AI images inspired by viral video thumbnails and key frames, creating original visuals that follow trending visual patterns",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "thumbnail_concepts": [
+      {
+        "concept_name": "string",
+        "description": "string",
+        "viral_patterns_used": "string",
+        "target_niche": "string",
+        "image_prompt": "string"
+      }
+    ],
+    "design_notes": "string"
+  },
+  "example_response": {
+    "thumbnail_concepts": [
+      {
+        "concept_name": "sample string",
+        "description": "sample string",
+        "viral_patterns_used": "sample string",
+        "target_niche": "sample string",
+        "image_prompt": "sample string"
+      }
+    ],
+    "design_notes": "sample string"
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [
+      {
+        "file_url": "https://example.com/image.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "agent_name": "Structure Generator Agent",
+  "agent_id": "699971d066df46343521bf76",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "templates": [
+      {
+        "template_name": "string",
+        "target_duration": "string",
+        "difficulty": "string",
+        "best_for": "string",
+        "viral_patterns_used": "string",
+        "segments": [
+          {
+            "segment_name": "string",
+            "timing": "string",
+            "description": "string",
+            "tips": "string"
+          }
+        ],
+        "cta_placement": "string",
+        "transition_style": "string"
+      }
+    ],
+    "general_tips": "string"
+  }
+}

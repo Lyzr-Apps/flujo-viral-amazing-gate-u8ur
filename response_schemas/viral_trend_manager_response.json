@@ -1,0 +1,166 @@
+{
+  "agent_name": "Viral Trend Manager",
+  "agent_id": "699971ebc9d9dd3effcccab1",
+  "description": "Coordinates the research, analysis, and structure generation sub-agents; aggregates all findings into a unified viral trend report",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "executive_summary": "string",
+    "top_insights": [
+      {
+        "insight": "string",
+        "action_item": "string"
+      }
+    ],
+    "viral_videos": [
+      {
+        "title": "string",
+        "channel": "string",
+        "views": "string",
+        "category": "string",
+        "topic": "string",
+        "virality_reason": "string",
+        "engagement_notes": "string"
+      }
+    ],
+    "style_analysis": {
+      "hook_patterns": [
+        {
+          "pattern_name": "string",
+          "description": "string",
+          "effectiveness": "string",
+          "example": "string"
+        }
+      ],
+      "pacing_analysis": [
+        {
+          "style": "string",
+          "description": "string",
+          "best_for": "string"
+        }
+      ],
+      "tone_patterns": [
+        {
+          "tone": "string",
+          "description": "string",
+          "usage_frequency": "string"
+        }
+      ],
+      "thumbnail_patterns": [
+        {
+          "pattern": "string",
+          "description": "string",
+          "impact": "string"
+        }
+      ],
+      "engagement_tactics": [
+        {
+          "tactic": "string",
+          "description": "string",
+          "effectiveness": "string"
+        }
+      ],
+      "key_takeaways": "string"
+    },
+    "video_templates": [
+      {
+        "template_name": "string",
+        "target_duration": "string",
+        "difficulty": "string",
+        "best_for": "string",
+        "viral_patterns_used": "string",
+        "segments": [
+          {
+            "segment_name": "string",
+            "timing": "string",
+            "description": "string",
+            "tips": "string"
+          }
+        ],
+        "cta_placement": "string",
+        "transition_style": "string"
+      }
+    ],
+    "week_overview": "string"
+  },
+  "example_response": {
+    "executive_summary": "sample string",
+    "top_insights": [
+      {
+        "insight": "sample string",
+        "action_item": "sample string"
+      }
+    ],
+    "viral_videos": [
+      {
+        "title": "sample string",
+        "channel": "sample string",
+        "views": "sample string",
+        "category": "sample string",
+        "topic": "sample string",
+        "virality_reason": "sample string",
+        "engagement_notes": "sample string"
+      }
+    ],
+    "style_analysis": {
+      "hook_patterns": [
+        {
+          "pattern_name": "sample string",
+          "description": "sample string",
+          "effectiveness": "sample string",
+          "example": "sample string"
+        }
+      ],
+      "pacing_analysis": [
+        {
+          "style": "sample string",
+          "description": "sample string",
+          "best_for": "sample string"
+        }
+      ],
+      "tone_patterns": [
+        {
+          "tone": "sample string",
+          "description": "sample string",
+          "usage_frequency": "sample string"
+        }
+      ],
+      "thumbnail_patterns": [
+        {
+          "pattern": "sample string",
+          "description": "sample string",
+          "impact": "sample string"
+        }
+      ],
+      "engagement_tactics": [
+        {
+          "tactic": "sample string",
+          "description": "sample string",
+          "effectiveness": "sample string"
+        }
+      ],
+      "key_takeaways": "sample string"
+    },
+    "video_templates": [
+      {
+        "template_name": "sample string",
+        "target_duration": "sample string",
+        "difficulty": "sample string",
+        "best_for": "sample string",
+        "viral_patterns_used": "sample string",
+        "segments": [
+          {
+            "segment_name": "sample string",
+            "timing": "sample string",
+            "description": "sample string",
+            "tips": "sample string"
+          }
+        ],
+        "cta_placement": "sample string",
+        "transition_style": "sample string"
+      }
+    ],
+    "week_overview": "sample string"
+  }
+}

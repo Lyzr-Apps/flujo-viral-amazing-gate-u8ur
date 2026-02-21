@@ -1,0 +1,36 @@
+{
+  "agent_name": "Script & Video Agent",
+  "agent_id": "6999720af4d61186679a93f1",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "scripts": [
+      {
+        "title": "string",
+        "viral_potential": "string",
+        "viral_styles_blended": "string",
+        "target_duration": "string",
+        "hook": "string",
+        "script_body": [
+          {
+            "timestamp": "string",
+            "section": "string",
+            "content": "string",
+            "delivery_notes": "string"
+          }
+        ],
+        "cta": "string",
+        "outro": "string",
+        "production_plan": {
+          "shot_list": "string",
+          "equipment": "string",
+          "editing_style": "string",
+          "music_suggestions": "string",
+          "thumbnail_concept": "string"
+        }
+      }
+    ],
+    "overall_strategy": "string"
+  }
+}

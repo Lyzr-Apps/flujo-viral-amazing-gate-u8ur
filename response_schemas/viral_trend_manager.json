@@ -1,0 +1,86 @@
+{
+  "agent_name": "Viral Trend Manager",
+  "agent_id": "699971ebc9d9dd3effcccab1",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "executive_summary": "string",
+    "top_insights": [
+      {
+        "insight": "string",
+        "action_item": "string"
+      }
+    ],
+    "viral_videos": [
+      {
+        "title": "string",
+        "channel": "string",
+        "views": "string",
+        "category": "string",
+        "topic": "string",
+        "virality_reason": "string",
+        "engagement_notes": "string"
+      }
+    ],
+    "style_analysis": {
+      "hook_patterns": [
+        {
+          "pattern_name": "string",
+          "description": "string",
+          "effectiveness": "string",
+          "example": "string"
+        }
+      ],
+      "pacing_analysis": [
+        {
+          "style": "string",
+          "description": "string",
+          "best_for": "string"
+        }
+      ],
+      "tone_patterns": [
+        {
+          "tone": "string",
+          "description": "string",
+          "usage_frequency": "string"
+        }
+      ],
+      "thumbnail_patterns": [
+        {
+          "pattern": "string",
+          "description": "string",
+          "impact": "string"
+        }
+      ],
+      "engagement_tactics": [
+        {
+          "tactic": "string",
+          "description": "string",
+          "effectiveness": "string"
+        }
+      ],
+      "key_takeaways": "string"
+    },
+    "video_templates": [
+      {
+        "template_name": "string",
+        "target_duration": "string",
+        "difficulty": "string",
+        "best_for": "string",
+        "viral_patterns_used": "string",
+        "segments": [
+          {
+            "segment_name": "string",
+            "timing": "string",
+            "description": "string",
+            "tips": "string"
+          }
+        ],
+        "cta_placement": "string",
+        "transition_style": "string"
+      }
+    ],
+    "week_overview": "string"
+  }
+}

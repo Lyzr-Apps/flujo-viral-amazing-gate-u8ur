@@ -1,0 +1,19 @@
+{
+  "agent_name": "Thumbnail & Image Agent",
+  "agent_id": "6999720af4d61186679a93ef",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": true,
+  "response_schema": {
+    "thumbnail_concepts": [
+      {
+        "concept_name": "string",
+        "description": "string",
+        "viral_patterns_used": "string",
+        "target_niche": "string",
+        "image_prompt": "string"
+      }
+    ],
+    "design_notes": "string"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "id": "input_node",
+        "type": "Input",
+        "label": "User Query",
+        "nodeCategory": "input"
+      },
+      {
+        "id": "manager_agent",
+        "type": "Agent",
+        "label": "Viral Trend Manager",
+        "nodeCategory": "agent"
+      },
+      {
+        "id": "trend_research_agent",
+        "type": "Agent",
+        "label": "Trend Research Agent",
+        "nodeCategory": "agent"
+      },
+      {
+        "id": "style_analysis_agent",
+        "type": "Agent",
+        "label": "Style Analysis Agent",
+        "nodeCategory": "agent"
+      },
+      {
+        "id": "structure_generator_agent",
+        "type": "Agent",
+        "label": "Structure Generator Agent",
+        "nodeCategory": "agent"
+      },
+      {
+        "id": "image_agent",
+        "type": "Agent",
+        "label": "Thumbnail & Image Agent",
+        "nodeCategory": "agent"
+      },
+      {
+        "id": "script_agent",
+        "type": "Agent",
+        "label": "Script & Video Agent",
+        "nodeCategory": "agent"
+      },
+      {
+        "id": "output_node",
+        "type": "Output",
+        "label": "Final Output",
+        "nodeCategory": "end"
+      }
+    ],
+    "edges": [
+      { "source": "input_node", "target": "manager_agent" },
+      { "source": "manager_agent", "target": "trend_research_agent" },
+      { "source": "manager_agent", "target": "style_analysis_agent" },
+      { "source": "manager_agent", "target": "structure_generator_agent" },
+      { "source": "manager_agent", "target": "image_agent" },
+      { "source": "image_agent", "target": "script_agent" },
+      { "source": "script_agent", "target": "output_node" }
+    ]
+  },
+  "agents": {
+    "trend_research_agent": {
+      "agent_id": "699971cf3f15947a386b5c1b",
+      "name": "Trend Research Agent",
+      "provider": "perplexity",
+      "model": "sonar-pro",
+      "temperature": 0.2,
+      "top_p": 1,
+      "type": "sub-agent"
+    },
+    "style_analysis_agent": {
+      "agent_id": "699971d066df46343521bf74",
+      "name": "Style Analysis Agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 1,
+      "type": "sub-agent"
+    },
+    "structure_generator_agent": {
+      "agent_id": "699971d066df46343521bf76",
+      "name": "Structure Generator Agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.5,
+      "top_p": 0.95,
+      "type": "sub-agent"
+    },
+    "viral_trend_manager": {
+      "agent_id": "699971ebc9d9dd3effcccab1",
+      "name": "Viral Trend Manager",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "type": "manager",
+      "managed_agents": [
+        "699971cf3f15947a386b5c1b",
+        "699971d066df46343521bf74",
+        "699971d066df46343521bf76"
+      ]
+    },
+    "thumbnail_image_agent": {
+      "agent_id": "6999720af4d61186679a93ef",
+      "name": "Thumbnail & Image Agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "type": "independent",
+      "image_output_config": {
+        "model": "dall-e-3"
+      }
+    },
+    "script_video_agent": {
+      "agent_id": "6999720af4d61186679a93f1",
+      "name": "Script & Video Agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "type": "independent"
+    }
+  }
+}
