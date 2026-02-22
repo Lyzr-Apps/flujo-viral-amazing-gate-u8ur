@@ -13,7 +13,8 @@
         "category": "string",
         "topic": "string",
         "virality_reason": "string",
-        "engagement_notes": "string"
+        "engagement_notes": "string",
+        "video_url": "string"
       }
     ],
     "summary": "string",

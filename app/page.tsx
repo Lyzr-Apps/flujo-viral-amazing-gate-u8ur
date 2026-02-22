@@ -42,7 +42,8 @@ import {
   FiGrid,
   FiHash,
   FiMessageCircle,
-  FiThumbsUp
+  FiThumbsUp,
+  FiExternalLink
 } from 'react-icons/fi'
 
 // ─── AGENT IDS ───────────────────────────────────────────────────────────────
@@ -64,6 +65,7 @@ interface ViralVideo {
   topic: string
   virality_reason: string
   engagement_notes: string
+  video_url?: string
 }
 
 interface HookPattern {
@@ -193,9 +195,9 @@ const SAMPLE_TREND_DATA: TrendData = {
     { insight: "Community engagement through polls and comments drives 2.8x more subscriber conversions", action_item: "Include at least one interactive element (poll, question, challenge) per video" }
   ],
   viral_videos: [
-    { title: "I Tried Living on $1 for 24 Hours", channel: "BudgetKing", views: "12.4M", category: "Challenge", topic: "Budget Living", virality_reason: "Relatability + extreme constraint creates tension", engagement_notes: "High comment engagement debating strategies" },
-    { title: "What Happens When You Only Eat Purple Food", channel: "FoodScience Lab", views: "8.7M", category: "Food Science", topic: "Color Diet Experiment", virality_reason: "Novelty concept with visual appeal", engagement_notes: "Shares driven by curiosity and surprise results" },
-    { title: "Why Nobody Talks About This Math Trick", channel: "MindBlown Academy", views: "15.2M", category: "Education", topic: "Mental Math", virality_reason: "Knowledge gap + practical utility", engagement_notes: "Saves and shares dominate; high rewatch rate" }
+    { title: "I Tried Living on $1 for 24 Hours", channel: "BudgetKing", views: "12.4M", category: "Challenge", topic: "Budget Living", virality_reason: "Relatability + extreme constraint creates tension", engagement_notes: "High comment engagement debating strategies", video_url: "https://www.youtube.com/results?search_query=I+Tried+Living+on+%241+for+24+Hours" },
+    { title: "What Happens When You Only Eat Purple Food", channel: "FoodScience Lab", views: "8.7M", category: "Food Science", topic: "Color Diet Experiment", virality_reason: "Novelty concept with visual appeal", engagement_notes: "Shares driven by curiosity and surprise results", video_url: "https://www.youtube.com/results?search_query=What+Happens+When+You+Only+Eat+Purple+Food" },
+    { title: "Why Nobody Talks About This Math Trick", channel: "MindBlown Academy", views: "15.2M", category: "Education", topic: "Mental Math", virality_reason: "Knowledge gap + practical utility", engagement_notes: "Saves and shares dominate; high rewatch rate", video_url: "https://www.youtube.com/results?search_query=Why+Nobody+Talks+About+This+Math+Trick" }
   ],
   style_analysis: {
     hook_patterns: [
@@ -491,6 +493,8 @@ function ProgressLoader({ label, sublabel }: { label: string; sublabel: string }
 
 // ─── VIRAL VIDEO CARD ────────────────────────────────────────────────────────
 function ViralVideoCard({ video }: { video: ViralVideo }) {
+  const hasUrl = video?.video_url && video.video_url.trim().length > 0
+
   return (
     <GlassCard className="p-5 flex flex-col gap-3 hover:shadow-xl transition-shadow duration-300">
       <div className="flex items-start justify-between gap-2">
@@ -519,6 +523,18 @@ function ViralVideoCard({ video }: { video: ViralVideo }) {
           <p className="text-xs text-muted-foreground">{video?.engagement_notes ?? ''}</p>
         </div>
       </div>
+      {hasUrl && (
+        <a
+          href={video.video_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 mt-1 px-3 py-2 bg-red-50 hover:bg-red-100 border border-red-200/50 rounded-xl text-xs font-medium text-red-700 hover:text-red-800 transition-all duration-200 group"
+        >
+          <FiPlay className="w-3.5 h-3.5 text-red-600 group-hover:scale-110 transition-transform" />
+          <span className="flex-1 truncate">{video.video_url}</span>
+          <FiExternalLink className="w-3 h-3 shrink-0 opacity-50 group-hover:opacity-100" />
+        </a>
+      )}
     </GlassCard>
   )
 }
@@ -869,7 +885,7 @@ export default function Page() {
     setActiveAgentId(TREND_MANAGER_ID)
     try {
       const result = await callAIAgent(
-        'Analyze the most viral YouTube videos from the past week. Find trending videos, analyze their styles, and generate reusable video structure templates.',
+        'Analyze the most viral YouTube videos from the past week. Find trending videos with their actual YouTube URLs (https://www.youtube.com/watch?v=...), analyze their styles, and generate reusable video structure templates. IMPORTANT: Include the real YouTube video_url link for every video you find.',
         TREND_MANAGER_ID
       )
       if (result.success) {
